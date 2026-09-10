@@ -1,0 +1,30 @@
+h1{
+    color:brown;
+    text-transform:capitalize;
+    font-family:'Times New Roman', Times, serif;
+    text-align:center;
+   
+    
+}
+p{
+    color:blue;
+    text-transform:uppercase;
+    font-fammily:Arial, Helvetica, sans-serif;  
+    font-style: italic;
+}
+#myParagraph{
+    color: peru;
+    text-transform:capitalize;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-style:normal 
+    text-align:center;  
+}
+ul{ 
+    list-style-type: none;
+    text-align: center;
+
+}
+ul li span{
+    font-weight: bold; 
+    
+}
