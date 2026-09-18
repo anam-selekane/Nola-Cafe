@@ -20,9 +20,38 @@ The main goal of Nola Cafe website is to promote the growth and visibility of th
 •	Promote and sell products: Highlight our menu, special and unique food that we offer and how easy they can get the meal through takeaways.
 •	Provide valuable Information: Nola Café is based in Walmer Port Elizabeth, the café opens at 7:00am and closes at 19:00 and any menu updates will also be available on the website.
 
+# Timeline and Milestones
+
+- Week 1:	Research	Research document
+- Week 2:	Planning 	Sitemaps and wireframes
+- Week 3:	Html Development	Website structure 
+- Week 4:	CSS Development	Website planning 
+- Week 5: JavaScript	Website functionality 
+- Week 6:	Testing 	Testing checklist 
+- Week 7:	Corrections	Finale improvement 
+
 # Sitemap
 contains all of the folders, files and inside Pages the htmls
 
+Nola-Cafe/ 
+
+ ├── index.html │
+ ├── pages/ 
+ │    ├── about.html 
+ │    ├── menu.html 
+ │    ├── contact.html
+ │    └── enquiry.html 
+ │ 
+ ├── css/ 
+ │ └── style.css 
+ │ 
+ ├── js/ 
+ │
+ │ 
+ ├── images/ 
+ │ 
+ │ 
+ └── README.md  
 
 
 # KEY FEATURES AND FUNCTIONALITY
@@ -70,3 +99,9 @@ The form includes:
 - Submit button
 - Reset button
 
+# References 
+
+- W3Schools. (2026). HTML Tutorial.
+- W3Schools. (2026). CSS Tutorial.
+
+# Changelog 
