@@ -10,7 +10,7 @@
 }
 
 
-/* BODY  */
+/* BODY */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -21,10 +21,7 @@ body {
 }
 
 
-/* =========================
-   HEADER
-   ========================= */
-
+/* Defining the decoration, typography, and the layout for Nola Cafe*/
 header {
     background-color: #4b2e20;
     color: white;
@@ -36,10 +33,7 @@ header {
 }
 
 
-/* =========================
-   LOGO
-   ========================= */
-
+/* LOGO*/
 .logo {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.8rem;
@@ -49,44 +43,44 @@ header {
 }
 
 
-/* =========================
-   NAVIGATION
-   ========================= */
+/* NAVIGATION LINKS */
 
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+nav {
+    background-color: #6d4c41;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    background-color: #4b2e20;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 8px;
 }
 
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links a {
-    color: #f7f1e8;
-    text-decoration: none;
-    padding: 10px 15px;
+nav a {
+    color: #fff8e7;
+    padding: 10px 18px;
     border-radius: 5px;
     font-weight: bold;
-    display: block;
+    transition: background-color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    background-color: #d7b894;
-    color: #3f2a1f;
+nav a:hover,
+nav a.active {
+    background-color: #d7b899;
+    color: #3e2723;
+    text-decoration: none;
 }
 
+/* Remove default link underline */
+a {
+    color: #5d4037;
+    text-decoration: none;
+}
 
-/* =========================
-   HEADINGS
-   ========================= */
+a:hover {
+    text-decoration: underline;
+}
+
+/* HEADINGS */
 
 h1,
 h2,
@@ -501,7 +495,7 @@ footer a {
     }
 }
 
-/* Mobile layout - CSS responsive breakpoint required for Part 2 */
+/* Mobile layout */
 @media (max-width: 600px) {
     body {
         font-size: 15px;
@@ -576,7 +570,7 @@ footer a {
     }
 }
 
-/* Very small phones */
+/* small phones */
 @media (max-width: 400px) {
     .hero-image {
         height: 210px;
