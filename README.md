@@ -20,6 +20,11 @@ The main goal of Nola Cafe website is to promote the growth and visibility of th
 •	Promote and sell products: Highlight our menu, special and unique food that we offer and how easy they can get the meal through takeaways.
 •	Provide valuable Information: Nola Café is based in Walmer Port Elizabeth, the café opens at 7:00am and closes at 19:00 and any menu updates will also be available on the website.
 
+# Sitemap
+contains all of the folders, files and inside Pages the htmls
+
+
+
 # KEY FEATURES AND FUNCTIONALITY
 - HOME PAGE
   The home page introduces the Nola Cafe to the visitors and also the cafe welcome message
