@@ -70,15 +70,7 @@ nav a.active {
     text-decoration: none;
 }
 
-/* Remove default link underline */
-a {
-    color: #5d4037;
-    text-decoration: none;
-}
 
-a:hover {
-    text-decoration: underline;
-}
 
 /* HEADINGS */
 
@@ -475,6 +467,14 @@ footer p {
 footer a {
     color: #d7b894;
 }
+
+.success-message {
+      display: none;
+      text-align: center;
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
 
 /* Tablet layout */
 @media (max-width: 900px) {
