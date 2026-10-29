@@ -22,7 +22,13 @@
     <a href="enquiry.html">Enquiry</a>
 </nav>
 
-
+<!--Add a hamburger navigation  for small devices-->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
   <!--CONTACT DETAILS-->
         <section>
       
@@ -54,42 +60,35 @@
            referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </section>   
           
-            <section class="card">
-            <h2>Send Us a Message</h2>
-            <form class="form-container" action="#" method="post">
-                <div class="form-group">
-                    <label for="contactName">Name:</label>
-                    <input type="text" id="contactName" name="contactName" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="contactEmail">Email:</label>
-                    <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="contactMessage">Message:</label>
-                    <textarea id="contactMessage" name="contactMessage" placeholder="Write your message here..." required></textarea>
-                </div>
-                <div class="form-buttons">
-                    <input type="submit" value="Send Message">
-                    <input type="reset" value="Clear Form">
-                </div>
-            </form>
-        </section>
-    </main>
-
-
-             <h1 style="text-align: center; color: black; size: 24px; size: medium">Follow Nola Café</h1>
-
-                <!-- Replace these with the café's verified social media profiles -->
-                <div class="social-links">
-                   <footer>
-                    <a href="https://facebook.com/NolaCafe" target="_blank"><i class = "fab fa-facebook-f"></i> Facebook</a>
-                    <a href="https://www.instagram.com/NolaCafe" target="_blank"><i class = "fab fa-instagram"></i> Instagram</a>
-                    <a href="https://twitter.com/NolaCafe" target="_blank"><i class = "fab fa-twitter"></i> Twitter</a>  
-                </footer>  
-                </div>
-
-
-
+            <section class="faq-section card" aria-labelledby="faqHeading">
+        <h2 id="faqHeading">Frequently Asked Questions</h2>
+        <details><summary>Can I ask about menu ingredients?</summary><p>Yes. Send us an enquiry with the menu item name and your question. Please tell us about any dietary requirements.</p></details>
+        <details><summary>Can I enquire about a table reservation?</summary><p>Choose “Table Reservation” on the enquiry form and include your preferred visit date and details. Submitting this demo form does not confirm a booking.</p></details>
+        <details><summary>How can I contact Nola Café?</summary><p>You can use the enquiry form on this website. Verify the café's official contact details before publishing.</p></details>
+    </section>
+    <section class="card">
+        <h2>Send Us a Message</h2>
+        <form class="form-container" action="#" method="post">
+            <div class="form-group"><label for="contactName">Name:</label><input type="text" id="contactName" name="contactName" placeholder="Enter your name" minlength="2" required></div>
+            <div class="form-group"><label for="contactEmail">Email:</label><input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email" required></div>
+            <div class="form-group"><label for="contactMessage">Message:</label><textarea id="contactMessage" name="contactMessage" placeholder="Write your message here..." minlength="10" required></textarea></div>
+            <div class="form-buttons"><button type="submit" class="button">Send Message</button><button type="reset" class="button button-light">Clear Form</button></div>
+        </form>
+    </section>
+</main>
+<footer class="site-footer">
+    <h2>Follow Nola Café</h2>
+    <div class="social-links">
+        <a href="https://facebook.com/NolaCafe" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/NolaCafe" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://twitter.com/NolaCafe" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </div>
+    <p>Nola Café | Walmer, Port Elizabeth | Open Monday to Friday, 07:00–19:00</p>
+    <p><a href="contact.html">Contact us</a> | <a href="enquiry.html">Send an enquiry</a> | <a href="../index.html">Home</a></p>
+    <p>© 2026 Nola Café. All rights reserved.</p>
+</footer>
+<div class="live-datetime"><span>Date: <span id="currentDate"></span></span><span>Current time: <span id="time"></span></span></div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
+
