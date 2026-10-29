@@ -105,3 +105,14 @@ The form includes:
 - W3Schools. (2026). CSS Tutorial.
 
 # Changelog 
+
+- Expandend my documentation 
+- improved the website content across all the main pages
+- Added more information about the cafe 
+- Improved the use of semantic HTML elements.
+- Added Html element content such as tables 
+- Added sitemap 
+- improved my ReadMe file 
+- Added pictures to my website 
+- Added references in my website 
+
