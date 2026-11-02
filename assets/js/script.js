@@ -182,3 +182,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+//Adding Image LightBox
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightboxImage");
+            document.querySelectorAll(".staff-img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightboxImg.src = img.src.replace("100", "600");
+                lightbox.style.display = "flex";
+            });
+            });
+              lightbox.addEventListener("click", () => lightbox.style.display = "none");
