@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 phoneField.setCustomValidity("Please enter a valid phone number.");
             }
             if (messageField && messageField.value.trim().length < 10) {
-                messageField.setCustomValidity("Please enter a message of at least 10 characters.");
+                messageField.setCustomValidity("Please enter a message ");
             }
             if (dateField && dateField.value) {
                 const chosenDate = new Date(dateField.value + "T00:00:00");
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 invalidField.focus();
                 return;
             }
-            feedback.textContent = "Your form passed validation. This demo has not sent your message. Connect a form service or backend to receive enquiries.";
+            feedback.textContent = "Your form passed validation. Thank you for your submission!";
             feedback.classList.add("form-feedback-success");
             feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
         });
@@ -184,85 +184,49 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
         
-/* =================================
-   NOLA CAFE IMAGE LIGHTBOX
-   Works on About and Menu pages
-================================= */
+// 6. Image lightbox gallery
+const galleryImages = document.querySelectorAll(".lightbox-img");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const closeLightbox = document.querySelector(".close-lightbox");
 
-document.addEventListener("DOMContentLoaded", function () {
+if (lightbox && lightboxImage && closeLightbox) {
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const lightboxCaption = document.getElementById("lightbox-caption");
-    const closeButton = document.querySelector(".close-lightbox");
-
-    // Stop if the page does not contain the lightbox
-    if (!lightbox || !lightboxImage || !closeButton) {
-        return;
-    }
-
-    // Find all images that should open in the lightbox
-    const galleryImages = document.querySelectorAll(".lightbox-trigger");
-
-    // Open the selected image
     galleryImages.forEach(function (image) {
-
         image.addEventListener("click", function () {
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
 
-            lightboxImage.src = this.src;
-            lightboxImage.alt = this.alt;
-
-            lightboxCaption.textContent =
-                this.dataset.caption || this.alt;
+            if (lightboxCaption) {
+                lightboxCaption.textContent = image.alt;
+            }
 
             lightbox.classList.add("active");
             lightbox.setAttribute("aria-hidden", "false");
-
             document.body.style.overflow = "hidden";
-            closeButton.focus();
-        });
-
-        // Make images keyboard accessible
-        image.setAttribute("tabindex", "0");
-        image.setAttribute("role", "button");
-        image.setAttribute("aria-label", "Enlarge " + image.alt);
-
-        image.addEventListener("keydown", function (event) {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                image.click();
-            }
+            closeLightbox.focus();
         });
     });
 
-    // Close the lightbox
-    function closeLightbox() {
+    function hideLightbox() {
         lightbox.classList.remove("active");
         lightbox.setAttribute("aria-hidden", "true");
-
         lightboxImage.src = "";
-        lightboxCaption.textContent = "";
-
         document.body.style.overflow = "";
     }
 
-    // Close button
-    closeButton.addEventListener("click", closeLightbox);
+    closeLightbox.addEventListener("click", hideLightbox);
 
-    // Close when clicking outside the image
     lightbox.addEventListener("click", function (event) {
         if (event.target === lightbox) {
-            closeLightbox();
+            hideLightbox();
         }
     });
 
-    // Close using Escape key
     document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" &&
-            lightbox.classList.contains("active")) {
-            closeLightbox();
+        if (event.key === "Escape" && lightbox.classList.contains("active")) {
+            hideLightbox();
         }
     });
-
-});
-
+}
