@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Explore the Nola Café menu of coffee, cold drinks, breakfast, lunch, light meals, desserts and snacks.">
+
     <title>Menu | Nola Café</title>
+
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
+
+    <!-- HEADER AND NAVIGATION -->
     <header class="site-header">
+
         <a class="site-logo" href="../index.html" aria-label="Nola Café home">
             <img src="../assets/images/logo.png" alt="Nola Café logo">
         </a>
-        <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
-            <span></span><span></span><span></span>
+
+        <button class="hamburger" type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mainNav">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
+
         <nav id="mainNav" class="nav-links" aria-label="Main navigation">
             <a href="../index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -22,220 +36,727 @@
             <a href="contact.html">Contact Us</a>
             <a href="enquiry.html">Enquiry</a>
         </nav>
+
     </header>
 
+
+    <!-- MAIN MENU CONTENT -->
     <main class="interactive-menu">
+
         <section class="menu-heading">
             <p class="eyebrow">Freshly made, served with care</p>
+
             <h1>Our Menu</h1>
-            <p>Explore our coffee, drinks, meals and sweet treats. Use the search box or choose a category to find something you love.</p>
+
+            <p>
+                Explore our coffee, drinks, meals and sweet treats.
+                Use the search box or choose a category to find
+                something you love.
+            </p>
         </section>
 
+
+        <!-- SEARCH AND FILTER BUTTONS -->
         <section class="menu-controls" aria-label="Search and filter the menu">
+
             <label for="menuSearch">Search the menu</label>
-            <input type="search" id="menuSearch" placeholder="Try cappuccino, burger or cake..." autocomplete="off">
+
+            <input
+                type="search"
+                id="menuSearch"
+                placeholder="Try cappuccino, burger or cake..."
+                autocomplete="off">
+
             <div class="menu-filters" role="group" aria-label="Filter by category">
-                <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">All Items</button>
-                <button type="button" class="filter-btn" data-category="coffee" aria-pressed="false">Coffee &amp; Hot Drinks</button>
-                <button type="button" class="filter-btn" data-category="cold" aria-pressed="false">Cold Drinks</button>
-                <button type="button" class="filter-btn" data-category="breakfast" aria-pressed="false">Breakfast</button>
-                <button type="button" class="filter-btn" data-category="lunch" aria-pressed="false">Lunch Meals</button>
-                <button type="button" class="filter-btn" data-category="light" aria-pressed="false">Light Meals</button>
-                <button type="button" class="filter-btn" data-category="desserts" aria-pressed="false">Desserts</button>
-                <button type="button" class="filter-btn" data-category="snacks" aria-pressed="false">Snacks</button>
-                <button type="button" class="filter-btn" data-category="specials" aria-pressed="false">Specials</button>
+
+                <button type="button" class="filter-btn active"
+                        data-category="all" aria-pressed="true">
+                    All Items
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="coffee" aria-pressed="false">
+                    Coffee &amp; Hot Drinks
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="cold" aria-pressed="false">
+                    Cold Drinks
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="breakfast" aria-pressed="false">
+                    Breakfast
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="lunch" aria-pressed="false">
+                    Lunch Meals
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="light" aria-pressed="false">
+                    Light Meals
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="desserts" aria-pressed="false">
+                    Desserts
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="snacks" aria-pressed="false">
+                    Snacks
+                </button>
+
+                <button type="button" class="filter-btn"
+                        data-category="specials" aria-pressed="false">
+                    Specials
+                </button>
+
             </div>
-            <p id="menuCount" class="menu-count" aria-live="polite">Loading menu items...</p>
+
+            <p id="menuCount" class="menu-count" aria-live="polite">
+                Loading menu items...
+            </p>
+
         </section>
 
+
+        <!-- MENU ITEMS -->
         <section id="menuGrid" class="menu-grid" aria-label="Menu items">
-            <!-- Coffee and hot drinks -->
+
+            <!-- COFFEE AND HOT DRINKS -->
+
             <article class="menu-card" data-category="coffee" data-name="espresso">
-             <img src="../assets/images/expresso.webp" alt ="Espresso coffee" loading="lazy">
-                    <div class="menu-card-content"><p class="menu-category">Coffee &amp;
-                         Hot Drinks</p><h2>Espresso</h2><p class="menu-description">A rich, concentrated coffee shot.
-                         </p><p class="menu-price">R25</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/expresso.webp"
+                     alt="Espresso coffee" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Espresso</h2>
+                    <p class="menu-description">A rich, concentrated coffee shot.</p>
+                    <p class="menu-price">R25</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="coffee" data-name="cappuccino">
-                <img src="../assets/images/cuppuccino.webp" alt="Cappuccino topped with milk foam" loading="lazy"><div 
-                class="menu-card-content"><p class="menu-category">Coffee &amp;
-                     Hot Drinks</p><h2>Cappuccino</h2><p class="menu-description">
-                    Espresso balanced with steamed milk and foam.</p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/cuppuccino.webp"
+                     alt="Cappuccino topped with milk foam" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Cappuccino</h2>
+                    <p class="menu-description">Espresso balanced with steamed milk and foam.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="coffee" data-name="latte">
-                <img src="../assets/images/Latte.webp" alt="Latte coffee" loading="lazy"><div class="menu-card-content"><p class="menu-category">Coffee &amp; Hot Drinks</p><h2>Latte</h2><p class="menu-description">Smooth espresso with steamed milk.</p><p class="menu-price">R32</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/Latte.webp"
+                     alt="Latte coffee" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Latte</h2>
+                    <p class="menu-description">Smooth espresso with steamed milk.</p>
+                    <p class="menu-price">R32</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="coffee" data-name="americano">
-                <img src="../assets/images/americano.webp" alt="Americano coffee" loading="lazy"><div class="menu-card-content"><p class="menu-category">Coffee &amp; Hot Drinks</p><h2>Americano</h2><p class="menu-description">Espresso topped with hot water.</p><p class="menu-price">R28</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/americano.webp"
+                     alt="Americano coffee" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Americano</h2>
+                    <p class="menu-description">Espresso topped with hot water.</p>
+                    <p class="menu-price">R28</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="coffee" data-name="flat white">
-                <img src="../assets/images/flat white.webp" alt="Flat white coffee" loading="lazy">
-                <div class="menu-card-content"><p class="menu-category">Coffee &amp;
-                     Hot Drinks</p><h2>Flat White</h2><p class="menu-description">Espresso with silky steamed milk.
-                     </p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/flat white.webp"
+                     alt="Flat white coffee" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Flat White</h2>
+                    <p class="menu-description">Espresso with silky steamed milk.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="coffee" data-name="mocha">
-                <img src="../assets/images/mocha.webp" alt="Mocha coffee" loading="lazy"><div class="menu-card-content"><p class="menu-category">Coffee &amp; Hot Drinks</p><h2>Mocha</h2><p class="menu-description">Coffee blended with chocolate and milk.</p><p class="menu-price">R35</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/mocha.webp"
+                     alt="Mocha coffee" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Mocha</h2>
+                    <p class="menu-description">Coffee blended with chocolate and milk.</p>
+                    <p class="menu-price">R35</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="coffee" data-name="hot chocolate">
-                <img src="../assets/images/hot chocolate.webp" alt="Hot chocolate" loading="lazy"><div class="menu-card-content"><p class="menu-category">Coffee &amp; Hot Drinks</p><h2>Hot Chocolate</h2><p class="menu-description">A comforting chocolate drink.</p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/hot chocolate.webp"
+                     alt="Hot chocolate" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Hot Chocolate</h2>
+                    <p class="menu-description">A comforting chocolate drink.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="coffee" data-name="chai latte">
-                <img src="../assets/images/chai latte.webp" alt="Chai latte coffee" loading="lazy">
-                <div class="menu-card-content"><p class="menu-category">Coffee &amp; 
-                    Hot Drinks</p><h2>Chai Latte</h2><p 
-                    class="menu-description">Spiced tea blended with steamed milk.</p><p class="menu-price">R34</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/chai latte.webp"
+                     alt="Chai latte" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Coffee &amp; Hot Drinks</p>
+                    <h2>Chai Latte</h2>
+                    <p class="menu-description">Spiced tea blended with steamed milk.</p>
+                    <p class="menu-price">R34</p>
+                </div>
             </article>
 
-            <!-- Cold drinks -->
+
+            <!-- COLD DRINKS -->
+
             <article class="menu-card" data-category="cold" data-name="iced coffee">
-                <img src="../assets/images/iced coffee.webp" alt="Iced coffee served cold" loading="lazy"><div class="menu-card-content"><p class="menu-category">Cold Drinks</p><h2>Iced Coffee</h2><p class="menu-description">Chilled coffee served over ice.</p><p class="menu-price">R35</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/iced coffee.webp"
+                     alt="Iced coffee served cold" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Cold Drinks</p>
+                    <h2>Iced Coffee</h2>
+                    <p class="menu-description">Chilled coffee served over ice.</p>
+                    <p class="menu-price">R35</p>
+                </div>
             </article>
-           
+
+
             <article class="menu-card" data-category="cold" data-name="iced mocha">
-                <img src="../assets/images/iced mocha.webp" alt="Iced mocha drink" loading="lazy"><div class="menu-card-content"><p class="menu-category">Cold Drinks</p><h2>Iced Mocha</h2><p class="menu-description">Chilled coffee with chocolate and milk.</p><p class="menu-price">R38</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/iced mocha.webp"
+                     alt="Iced mocha drink" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Cold Drinks</p>
+                    <h2>Iced Mocha</h2>
+                    <p class="menu-description">Chilled coffee with chocolate and milk.</p>
+                    <p class="menu-price">R38</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="cold" data-name="fresh juice orange apple mango">
-                <img src="../assets/images/mango juice.webp" alt="Mango Juice" loading="lazy">
-                <div class="menu-card-content"><p 
-                    class="menu-category">Cold Drinks</p><h2>Fresh Juice</h2><p
-                     class="menu-description">Orange, apple or mango.</p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/mango juice.webp"
+                     alt="Fresh mango juice" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Cold Drinks</p>
+                    <h2>Fresh Juice</h2>
+                    <p class="menu-description">Orange, apple or mango.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="cold" data-name="smoothies strawberry banana mixed berry">
-                <img src="../assets/images/mixed berries smoothie.webp" alt="Smoothie served in a glass" loading="lazy"><div class="menu-card-content"><p class="menu-category">Cold Drinks</p><h2>Smoothies</h2><p class="menu-description">Strawberry, banana or mixed berry.</p><p class="menu-price">R40</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/mixed berries smoothie.webp"
+                     alt="Mixed berry smoothie" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Cold Drinks</p>
+                    <h2>Smoothies</h2>
+                    <p class="menu-description">Strawberry, banana or mixed berry.</p>
+                    <p class="menu-price">R40</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="cold" data-name="milkshakes chocolate vanilla caramel">
-                <img src="../assets/images/chocolate milkshake.webp" alt="Chocolate milkshake" loading="lazy"><div class="menu-card-content"><p class="menu-category">Cold Drinks</p><h2>Milkshakes</h2><p class="menu-description">Chocolate, vanilla or caramel.</p><p class="menu-price">R42</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/chocolate milkshake.webp"
+                     alt="Chocolate milkshake" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Cold Drinks</p>
+                    <h2>Milkshakes</h2>
+                    <p class="menu-description">Chocolate, vanilla or caramel.</p>
+                    <p class="menu-price">R42</p>
+                </div>
             </article>
 
-            <!-- Breakfast -->
-           
+
+            <!-- BREAKFAST -->
+
             <article class="menu-card" data-category="breakfast" data-name="egg bacon sandwich">
-                <img src="../assets/images/egg and bacon sandwich.webp" alt="Egg and bacon sandwich" loading="lazy"><div class="menu-card-content"><p class="menu-category">Breakfast</p><h2>Egg &amp; Bacon Sandwich</h2><p class="menu-description">Egg and bacon served in a sandwich.</p><p class="menu-price">R45</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/egg and bacon sandwich.webp"
+                     alt="Egg and bacon sandwich" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Breakfast</p>
+                    <h2>Egg &amp; Bacon Sandwich</h2>
+                    <p class="menu-description">Egg and bacon served in a sandwich.</p>
+                    <p class="menu-price">R45</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="breakfast" data-name="omelette cheese veggie">
-                <img src="../assets/images/omlette.webp" alt="Omelette" loading="lazy"><div class="menu-card-content"><p class="menu-category">Breakfast</p><h2>Omelette</h2><p class="menu-description">Choose cheese or veggie.</p><p class="menu-price">R50</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/omlette.webp"
+                     alt="Omelette" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Breakfast</p>
+                    <h2>Omelette</h2>
+                    <p class="menu-description">Choose cheese or veggie.</p>
+                    <p class="menu-price">R50</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="breakfast" data-name="pancakes with syrup">
-                <img src="../assets/images/pancakes with syrup.webp" alt="Pancakes served with syrup" loading="lazy"><div class="menu-card-content"><p class="menu-category">Breakfast</p><h2>Pancakes with Syrup</h2><p class="menu-description">Soft pancakes finished with syrup.</p><p class="menu-price">R40</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/pancakes with syrup.webp"
+                     alt="Pancakes served with syrup" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Breakfast</p>
+                    <h2>Pancakes with Syrup</h2>
+                    <p class="menu-description">Soft pancakes finished with syrup.</p>
+                    <p class="menu-price">R40</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="breakfast" data-name="french toast">
-                <img src="../assets/images/french toast.webp" alt="French toast" loading="lazy"><div class="menu-card-content"><p class="menu-category">Breakfast</p><h2>French Toast</h2><p class="menu-description">Golden toast for a delicious breakfast.</p><p class="menu-price">R45</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/french toast.webp"
+                     alt="French toast" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Breakfast</p>
+                    <h2>French Toast</h2>
+                    <p class="menu-description">Golden toast for a delicious breakfast.</p>
+                    <p class="menu-price">R45</p>
+                </div>
             </article>
 
-            <!-- Lunch meals -->
+
+            <!-- LUNCH MEALS -->
+
             <article class="menu-card" data-category="lunch" data-name="beef burger fries">
-                <img src="../assets/images/beef burger and fries.webp" alt="Beef burger served with fries" loading="lazy"><div class="menu-card-content"><p class="menu-category">Lunch Meals</p><h2>Beef Burger &amp; Fries</h2><p class="menu-description">A beef burger served with crispy fries.</p><p class="menu-price">R75</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/beef burger and fries.webp"
+                     alt="Beef burger served with fries" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Lunch Meals</p>
+                    <h2>Beef Burger &amp; Fries</h2>
+                    <p class="menu-description">A beef burger served with crispy fries.</p>
+                    <p class="menu-price">R75</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="lunch" data-name="chicken wrap">
-                <img src="../assets/images/chicken wrap.webp" alt="Chicken wrap" loading="lazy"><div class="menu-card-content"><p class="menu-category">Lunch Meals</p><h2>Chicken Wrap</h2><p class="menu-description">Chicken and fresh fillings wrapped together.</p><p class="menu-price">R60</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/chicken wrap.webp"
+                     alt="Chicken wrap" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Lunch Meals</p>
+                    <h2>Chicken Wrap</h2>
+                    <p class="menu-description">Chicken and fresh fillings wrapped together.</p>
+                    <p class="menu-price">R60</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="lunch" data-name="grilled chicken salad">
-                <img src="../assets/images/grilled chicken and salad.webp" alt="Grilled chicken served with salad" loading="lazy"><div class="menu-card-content"><p class="menu-category">Lunch Meals</p><h2>Grilled Chicken Salad</h2><p class="menu-description">Grilled chicken served with fresh salad.</p><p class="menu-price">R65</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/grilled chicken and salad.webp"
+                     alt="Grilled chicken served with salad" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Lunch Meals</p>
+                    <h2>Grilled Chicken Salad</h2>
+                    <p class="menu-description">Grilled chicken served with fresh salad.</p>
+                    <p class="menu-price">R65</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="lunch" data-name="pasta alfredo">
-                <img src="../assets/images/pasta alfredo.webp" alt="Pasta Alfredo" loading="lazy"><div class="menu-card-content"><p class="menu-category">Lunch Meals</p><h2>Pasta Alfredo</h2><p class="menu-description">Pasta in a creamy Alfredo-style sauce.</p><p class="menu-price">R70</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/pasta alfredo.webp"
+                     alt="Pasta Alfredo" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Lunch Meals</p>
+                    <h2>Pasta Alfredo</h2>
+                    <p class="menu-description">Pasta in a creamy Alfredo-style sauce.</p>
+                    <p class="menu-price">R70</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="lunch" data-name="steak chips">
-                <img src="../assets/images/steak and chips.webp" alt="Steak served with chips" loading="lazy"><div class="menu-card-content"><p class="menu-category">Lunch Meals</p><h2>Steak &amp; Chips</h2><p class="menu-description">Steak served with chips.</p><p class="menu-price">R95</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/steak and chips.webp"
+                     alt="Steak served with chips" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Lunch Meals</p>
+                    <h2>Steak &amp; Chips</h2>
+                    <p class="menu-description">Steak served with chips.</p>
+                    <p class="menu-price">R95</p>
+                </div>
             </article>
 
-            <!-- Light meals -->
+
+            <!-- LIGHT MEALS -->
+
             <article class="menu-card" data-category="light" data-name="caesar salad">
-                <img src="../assets/images/caesar saland.webp" alt="Caesar salad" loading="lazy"><div class="menu-card-content"><p class="menu-category">Light Meals</p><h2>Caesar Salad</h2><p class="menu-description">A fresh salad with classic Caesar-style flavours.</p><p class="menu-price">R60</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/caesar saland.webp"
+                     alt="Caesar salad" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Light Meals</p>
+                    <h2>Caesar Salad</h2>
+                    <p class="menu-description">A fresh salad with classic Caesar-style flavours.</p>
+                    <p class="menu-price">R60</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="light" data-name="greek salad">
-                <img src="../assets/images/greek salad.webp" alt="Greek salad" loading="lazy"><div class="menu-card-content"><p class="menu-category">Light Meals</p><h2>Greek Salad</h2><p class="menu-description">A refreshing mixed salad.</p><p class="menu-price">R55</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/greek salad.webp"
+                     alt="Greek salad" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Light Meals</p>
+                    <h2>Greek Salad</h2>
+                    <p class="menu-description">A refreshing mixed salad.</p>
+                    <p class="menu-price">R55</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="light" data-name="toasted sandwiches cheese ham chicken mayo">
-                <img src="../assets/images/toasted sandwich.webp" alt="Toasted sandwiches" loading="lazy"><div class="menu-card-content"><p class="menu-category">Light Meals</p><h2>Toasted Sandwiches</h2><p class="menu-description">Choose cheese, ham or chicken mayo.</p><p class="menu-price">R40</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/toasted sandwich.webp"
+                     alt="Toasted sandwiches" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Light Meals</p>
+                    <h2>Toasted Sandwiches</h2>
+                    <p class="menu-description">Choose cheese, ham or chicken mayo.</p>
+                    <p class="menu-price">R40</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="light" data-name="avocado toast">
-                <img src="../assets/images/advocado toast.webp" alt="Avocado toast" loading="lazy"><div class="menu-card-content"><p class="menu-category">Light Meals</p><h2>Avocado Toast</h2><p class="menu-description">Toast topped with avocado.</p><p class="menu-price">R50</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/advocado toast.webp"
+                     alt="Avocado toast" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Light Meals</p>
+                    <h2>Avocado Toast</h2>
+                    <p class="menu-description">Toast topped with avocado.</p>
+                    <p class="menu-price">R50</p>
+                </div>
             </article>
 
-            <!-- Desserts -->
+
+            <!-- DESSERTS -->
+
             <article class="menu-card" data-category="desserts" data-name="chocolate cake">
-                <img src="../assets/images/chocolate cake.webp" alt="Chocolate cake" loading="lazy"><div class="menu-card-content"><p class="menu-category">Desserts</p><h2>Chocolate Cake</h2><p class="menu-description">A sweet chocolate treat.</p><p class="menu-price">R40</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/chocolate cake.webp"
+                     alt="Chocolate cake" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Desserts</p>
+                    <h2>Chocolate Cake</h2>
+                    <p class="menu-description">A sweet chocolate treat.</p>
+                    <p class="menu-price">R40</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="desserts" data-name="cheesecake">
-                <img src="../assets/images/cheese cake.webp" alt="Cheesecake" loading="lazy"><div class="menu-card-content"><p class="menu-category">Desserts</p><h2>Cheesecake</h2><p class="menu-description">Creamy cheesecake dessert.</p><p class="menu-price">R45</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/cheese cake.webp"
+                     alt="Cheesecake" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Desserts</p>
+                    <h2>Cheesecake</h2>
+                    <p class="menu-description">Creamy cheesecake dessert.</p>
+                    <p class="menu-price">R45</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="desserts" data-name="muffins">
-                <img src="../assets/images/muffins.webp" alt="Muffins" loading="lazy"><div class="menu-card-content"><p class="menu-category">Desserts</p><h2>Muffins</h2><p class="menu-description">A freshly baked sweet snack.</p><p class="menu-price">R25</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/muffins.webp"
+                     alt="Muffins" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Desserts</p>
+                    <h2>Muffins</h2>
+                    <p class="menu-description">A freshly baked sweet snack.</p>
+                    <p class="menu-price">R25</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="desserts" data-name="croissants">
-                <img src="../assets/images/croissant.webp" alt="Croissants" loading="lazy"><div class="menu-card-content"><p class="menu-category">Desserts</p><h2>Croissants</h2><p class="menu-description">A flaky pastry.</p><p class="menu-price">R28</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/croissant.webp"
+                     alt="Croissants" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Desserts</p>
+                    <h2>Croissants</h2>
+                    <p class="menu-description">A flaky pastry.</p>
+                    <p class="menu-price">R28</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="desserts" data-name="brownies">
-                <img src="../assets/images/brownies.webp" alt="Brownies" loading="lazy"><div class="menu-card-content"><p class="menu-category">Desserts</p><h2>Brownies</h2><p class="menu-description">Rich chocolate brownies.</p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/brownies.webp"
+                     alt="Brownies" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Desserts</p>
+                    <h2>Brownies</h2>
+                    <p class="menu-description">Rich chocolate brownies.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="desserts" data-name="ice cream">
-                <img src="../assets/images/ice cream.webp" alt="Ice Cream" loading="lazy"><div class="menu-card-content"><p class="menu-category">Desserts</p><h2>Ice Cream</h2><p class="menu-description">A cool and creamy dessert.</p><p class="menu-price">R35</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/ice cream.webp"
+                     alt="Ice cream" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Desserts</p>
+                    <h2>Ice Cream</h2>
+                    <p class="menu-description">A cool and creamy dessert.</p>
+                    <p class="menu-price">R35</p>
+                </div>
             </article>
 
-            <!-- Snacks -->
+
+            <!-- SNACKS -->
+
             <article class="menu-card" data-category="snacks" data-name="fries">
-                <img src="../assets/images/fries.webp" alt="Fries" loading="lazy"><div class="menu-card-content"><p class="menu-category">Snacks</p><h2>Fries</h2><p class="menu-description">Crispy golden fries.</p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/fries.webp"
+                     alt="Fries" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Snacks</p>
+                    <h2>Fries</h2>
+                    <p class="menu-description">Crispy golden fries.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="snacks" data-name="onion rings">
-                <img src="../assets/images/onion rings.webp" alt="Onion Rings" loading="lazy"><div class="menu-card-content"><p class="menu-category">Snacks</p><h2>Onion Rings</h2><p class="menu-description">Crispy onion rings.</p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/onion rings.webp"
+                     alt="Onion rings" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Snacks</p>
+                    <h2>Onion Rings</h2>
+                    <p class="menu-description">Crispy onion rings.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="snacks" data-name="chicken nuggets">
-                <img src="../assets/images/chicken nuggets.webp" alt="Chicken Nuggets" loading="lazy"><div class="menu-card-content"><p class="menu-category">Snacks</p><h2>Chicken Nuggets</h2><p class="menu-description">Bite-sized chicken pieces.</p><p class="menu-price">R40</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/chicken nuggets.webp"
+                     alt="Chicken nuggets" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Snacks</p>
+                    <h2>Chicken Nuggets</h2>
+                    <p class="menu-description">Bite-sized chicken pieces.</p>
+                    <p class="menu-price">R40</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="snacks" data-name="scones jam cream">
-                <img src="../assets/images/scones and jam.webp" alt="Scones with Jam & Cream" loading="lazy"><div class="menu-card-content"><p class="menu-category">Snacks</p><h2>Scones with Jam &amp; Cream</h2><p class="menu-description">Scones served with jam and cream.</p><p class="menu-price">R30</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/scones and jam.webp"
+                     alt="Scones with jam and cream" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Snacks</p>
+                    <h2>Scones with Jam &amp; Cream</h2>
+                    <p class="menu-description">Scones served with jam and cream.</p>
+                    <p class="menu-price">R30</p>
+                </div>
             </article>
 
-            <!-- Specials -->
+
+            <!-- NOLA SPECIALS -->
+
             <article class="menu-card" data-category="specials" data-name="nola special breakfast">
-                <img src="../assets/images/Nola Café Breakfast Special.png" alt="Nola Special Breakfast" loading="lazy">
-                </div><div class="menu-card-content"><p 
-                    class="menu-category">Specials</p>
-                    <h2>Nola Special Breakfast</h2><p class="menu-description">Our special breakfast option.</p>
-                    <p class="menu-price">R85</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/Nola Café Breakfast Special.png"
+                     alt="Nola Special Breakfast" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Specials</p>
+                    <h2>Nola Special Breakfast</h2>
+                    <p class="menu-description">Our special breakfast option.</p>
+                    <p class="menu-price">R85</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="specials" data-name="signature nola latte">
-                <img src="../assets/images/Nola Latte Signature Café Advertisement.png" alt="Signature Nola Latte" loading="lazy">
-                <div class="menu-card-content"><p class="menu-category">Specials</p><h2>Signature Nola Latte</h2><p class="menu-description">A café favourite.</p><p class="menu-price">R38</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/Nola Latte Signature Café Advertisement.png"
+                     alt="Signature Nola Latte" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Specials</p>
+                    <h2>Signature Nola Latte</h2>
+                    <p class="menu-description">A café favourite.</p>
+                    <p class="menu-price">R38</p>
+                </div>
             </article>
+
+
             <article class="menu-card" data-category="specials" data-name="chefs special burger">
-                <img src="../assets/images/NOLA Café Cheeseburger Feast.png" alt="Chef’s Special Burger" loading="lazy">
-                <div class="menu-card-content"><p class="menu-category">Specials</p><h2>Chef’s Special Burger</h2><p class="menu-description">A special burger from our kitchen.</p><p class="menu-price">R85</p></div>
+                <img class="lightbox-trigger"
+                     src="../assets/images/NOLA Café Cheeseburger Feast.png"
+                     alt="Chef's Special Burger" loading="lazy">
+
+                <div class="menu-card-content">
+                    <p class="menu-category">Specials</p>
+                    <h2>Chef’s Special Burger</h2>
+                    <p class="menu-description">A special burger from our kitchen.</p>
+                    <p class="menu-price">R85</p>
+                </div>
             </article>
 
-            <body> 
-              <div id="lightbox" class="lightbox" aria-hidden="true">
-               <button type="button" class="close-lightbox"
-            aria-label="Close image">&times;</button>
-             <div class="lightbox-content">
-             <img id="lightbox-image" src="" alt="">
-            <p id="lightbox-caption"></p>
-    </div>
-</div>
-
-            </body>
-           
         </section>
 
-        <p id="noResults" class="no-results" hidden>No menu items match your search. Try a different word or category.</p>
-        <div class="menu-reset-wrap"><button id="resetMenu" class="button button-light" type="button">Show All Menu Items</button></div>
+
+        <p id="noResults" class="no-results" hidden>
+            No menu items match your search. Try a different word or category.
+        </p>
+
+        <div class="menu-reset-wrap">
+            <button id="resetMenu" class="button button-light" type="button">
+                Show All Menu Items
+            </button>
+        </div>
+
     </main>
 
-<footer class="site-footer">
-    <h2>Follow Nola Café</h2>
-    <div class="social-links">
-        <a href="https://facebook.com/NolaCafe" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.instagram.com/NolaCafe" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://twitter.com/NolaCafe" target="_blank" rel="noopener noreferrer">Twitter</a>
+
+    <!-- IMAGE LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+
+        <button type="button"
+                class="close-lightbox"
+                aria-label="Close image">
+            &times;
+        </button>
+
+        <div class="lightbox-content">
+
+            <img id="lightbox-image" src="" alt="">
+
+            <p id="lightbox-caption"></p>
+
+        </div>
+
     </div>
-    <p>Nola Café | Walmer, Port Elizabeth | Open Monday to Friday, 07:00–19:00</p>
-    <p><a href="contact.html">Contact us</a> | <a href="enquiry.html">Send an enquiry</a> | <a href="../index.html">Home</a></p>
-    <p>© 2026 Nola Café. All rights reserved.</p>
-</footer>
-<div class="live-datetime"><span>Date: <span id="currentDate"></span></span><span>Current time: <span id="time"></span></span></div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <h2>Follow Nola Café</h2>
+
+        <div class="social-links">
+            <a href="https://facebook.com/NolaCafe" target="_blank" rel="noopener noreferrer">Facebook</a>
+
+            <a href="https://www.instagram.com/NolaCafe" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+            <a href="https://twitter.com/NolaCafe" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </div>
+
+        <p>Nola Café | Walmer, Port Elizabeth | Open Monday to Friday, 07:00–19:00</p>
+
+        <p>
+            <a href="contact.html">Contact us</a> |
+            <a href="enquiry.html">Send an enquiry</a> |
+            <a href="../index.html">Home</a>
+        </p>
+
+        <p>© 2026 Nola Café. All rights reserved.</p>
+
+    </footer>
+
+
+    <!-- DATE AND TIME -->
+    <div class="live-datetime">
+        <span>Date: <span id="currentDate"></span></span>
+        <span>Current time: <span id="time"></span></span>
+    </div>
+
+
     <script src="../assets/js/script.js"></script>
+
 </body>
 </html>
-
