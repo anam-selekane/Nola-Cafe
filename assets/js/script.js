@@ -183,13 +183,86 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//Adding Image LightBox
-            const lightbox = document.getElementById("lightbox");
-            const lightboxImg = document.getElementById("lightboxImage");
-            document.querySelectorAll(".staff-img").forEach(img => {
-            img.addEventListener("click", () => {
-                lightboxImg.src = img.src.replace("100", "600");
-                lightbox.style.display = "flex";
-            });
-            });
-              lightbox.addEventListener("click", () => lightbox.style.display = "none");
+        
+/* =================================
+   NOLA CAFE IMAGE LIGHTBOX
+   Works on About and Menu pages
+================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeButton = document.querySelector(".close-lightbox");
+
+    // Stop if the page does not contain the lightbox
+    if (!lightbox || !lightboxImage || !closeButton) {
+        return;
+    }
+
+    // Find all images that should open in the lightbox
+    const galleryImages = document.querySelectorAll(".lightbox-trigger");
+
+    // Open the selected image
+    galleryImages.forEach(function (image) {
+
+        image.addEventListener("click", function () {
+
+            lightboxImage.src = this.src;
+            lightboxImage.alt = this.alt;
+
+            lightboxCaption.textContent =
+                this.dataset.caption || this.alt;
+
+            lightbox.classList.add("active");
+            lightbox.setAttribute("aria-hidden", "false");
+
+            document.body.style.overflow = "hidden";
+            closeButton.focus();
+        });
+
+        // Make images keyboard accessible
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("role", "button");
+        image.setAttribute("aria-label", "Enlarge " + image.alt);
+
+        image.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                image.click();
+            }
+        });
+    });
+
+    // Close the lightbox
+    function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+
+        lightboxImage.src = "";
+        lightboxCaption.textContent = "";
+
+        document.body.style.overflow = "";
+    }
+
+    // Close button
+    closeButton.addEventListener("click", closeLightbox);
+
+    // Close when clicking outside the image
+    lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close using Escape key
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" &&
+            lightbox.classList.contains("active")) {
+            closeLightbox();
+        }
+    });
+
+});
+
