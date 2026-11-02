@@ -184,8 +184,6 @@ MDN Web Docs. (n.d.). HTML: HyperText Markup Language. Available at: https://dev
 
 W3Schools. (n.d.). CSS Tutorial. Available at: https://www.w3schools.com/css/
 
-MDN Web Docs. (n.d.). CSS: Cascading Style Sheets. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS
-
 MDN Web Docs. (n.d.). Responsive Design. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 
 3. JavaScript Resources
@@ -194,7 +192,6 @@ W3Schools. (n.d.). JavaScript Tutorial. Available at: https://www.w3schools.com/
 
 MDN Web Docs. (n.d.). JavaScript Guide. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 
-MDN Web Docs. (n.d.). Client-side Form Validation. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
 
 4. Google Fonts
 
@@ -202,11 +199,8 @@ Google Fonts. (n.d.). Google Fonts. Available at: https://fonts.google.com/
 
 Google for Developers. (n.d.). Get Started with the Google Fonts API. Available at: https://developers.google.com/fonts/docs/getting_started
 
-5. Google Maps
 
-Google for Developers. (n.d.). Google Maps Platform Documentation. Available at: https://developers.google.com/maps/documentation
-
-6. Image Resources
+5. Image Resources
 Four pictures are AI generated, logo, signiture latte, Nola Cafe Breakfast, Nola Cafe Cheese Burger
 Rest of the picture are found in microsoft edge.
 
@@ -277,26 +271,7 @@ Date: November 2026
 - Documented the technologies used.
 - Added the project folder structure.
 - Added records of improvements from Part 2.
-- Created a separate REFERENCES.md document.
-- Created this CHANGELOG.md document.
 
-## Final Testing and Submission
-
-**Date: November 2026**
-
-### Testing Activities
-- Check that all five website pages open correctly.
-- Test navigation links across all pages.
-- Test the hamburger menu on mobile devices.
-- Check that the external CSS stylesheet loads correctly.
-- Test JavaScript functionality.
-- Test menu search and category filtering.
-- Test enquiry form validation.
-- Check that images display correctly.
-- Test the Google Maps display on mobile devices.
-- Capture desktop, tablet and mobile screenshots.
-- Review the README, references and changelog.
-- Review the GitHub repository before submission.
 
 ## Project Information
 
@@ -305,4 +280,3 @@ Date: November 2026
 - Module: WEDE5020 – Web Development
 - Project Location: Walmer, Gqeberha, South Africa
 
-**Final Project Goal:** To develop a functional, attractive, responsive and user-friendly website that promotes Nola Café and provides customers with information about its products and services.
