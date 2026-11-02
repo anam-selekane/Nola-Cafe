@@ -793,17 +793,20 @@ button.accordion:focus-visible { outline: 3px solid #b78050; outline-offset: 3px
     gap: 20px;
 }
 
-.lightbox-img {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+
+/* =================================
+   NOLA CAFE LIGHTBOX STYLING
+================================= */
+
+/* Gallery images */
+.lightbox-trigger {
+    cursor: zoom-in;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.lightbox-img:hover {
-    transform: scale(1.05);
+.lightbox-trigger:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
 }
 
 /* Lightbox background */
@@ -812,35 +815,44 @@ button.accordion:focus-visible { outline: 3px solid #b78050; outline-offset: 3px
     position: fixed;
     z-index: 9999;
     inset: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 30px;
+    justify-content: center;
+    padding: 20px;
 }
 
+/* Show lightbox */
 .lightbox.active {
     display: flex;
 }
 
-.lightbox #lightbox-image {
-    max-width: 90%;
-    max-height: 80vh;
+/* Image and caption */
+.lightbox-content {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 #lightbox-caption {
     color: white;
-    margin-top: 15px;
     font-size: 18px;
+    margin-top: 15px;
 }
 
 /* Close button */
 .close-lightbox {
     position: absolute;
-    top: 20px;
-    right: 35px;
+    top: 15px;
+    right: 30px;
     color: white;
     background: transparent;
     border: none;
@@ -848,13 +860,27 @@ button.accordion:focus-visible { outline: 3px solid #b78050; outline-offset: 3px
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    .lightbox-img {
-        width: 100%;
-        max-width: 320px;
+.close-lightbox:hover {
+    color: #d7b899;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+    .lightbox {
+        padding: 12px;
     }
 
-    .lightbox #lightbox-image {
-        max-width: 100%;
+    .lightbox-content img {
+        max-height: 65vh;
+    }
+
+    #lightbox-caption {
+        font-size: 15px;
+    }
+
+    .close-lightbox {
+        top: 10px;
+        right: 18px;
+        font-size: 38px;
     }
 }
