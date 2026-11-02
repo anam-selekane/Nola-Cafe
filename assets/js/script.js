@@ -184,49 +184,103 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
         
-// 6. Image lightbox gallery
-const galleryImages = document.querySelectorAll(".lightbox-img");
-const lightbox = document.querySelector(".lightbox");
-const lightboxImage = document.getElementById("lightbox-image");
-const lightboxCaption = document.getElementById("lightbox-caption");
-const closeLightbox = document.querySelector(".close-lightbox");
+/* =================================
+   NOLA CAFE IMAGE LIGHTBOX
+================================= */
 
-if (lightbox && lightboxImage && closeLightbox) {
+document.addEventListener("DOMContentLoaded", function () {
 
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeButton = document.querySelector(".close-lightbox");
+
+    if (!lightbox || !lightboxImage || !closeButton) {
+        return;
+    }
+
+    const galleryImages = document.querySelectorAll(".lightbox-trigger");
+
+    // Open image
     galleryImages.forEach(function (image) {
-        image.addEventListener("click", function () {
-            lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt;
 
-            if (lightboxCaption) {
-                lightboxCaption.textContent = image.alt;
-            }
+        image.addEventListener("click", function () {
+
+            lightboxImage.src = this.src;
+            lightboxImage.alt = this.alt;
+
+            lightboxCaption.textContent =
+                this.dataset.caption || this.alt;
 
             lightbox.classList.add("active");
             lightbox.setAttribute("aria-hidden", "false");
+
             document.body.style.overflow = "hidden";
-            closeLightbox.focus();
+
+            closeButton.focus();
+
         });
+
+        // Keyboard accessibility
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("role", "button");
+
+        image.addEventListener("keydown", function (event) {
+
+            if (event.key === "Enter" || event.key === " ") {
+
+                event.preventDefault();
+                image.click();
+
+            }
+
+        });
+
     });
 
-    function hideLightbox() {
+
+    // Close lightbox
+    function closeLightbox() {
+
         lightbox.classList.remove("active");
+
         lightbox.setAttribute("aria-hidden", "true");
+
         lightboxImage.src = "";
+
+        lightboxCaption.textContent = "";
+
         document.body.style.overflow = "";
+
     }
 
-    closeLightbox.addEventListener("click", hideLightbox);
 
+    // Close button
+    closeButton.addEventListener("click", closeLightbox);
+
+
+    // Close when clicking outside the image
     lightbox.addEventListener("click", function (event) {
+
         if (event.target === lightbox) {
-            hideLightbox();
+
+            closeLightbox();
+
         }
+
     });
 
+
+    // Close with Escape key
     document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && lightbox.classList.contains("active")) {
-            hideLightbox();
+
+        if (event.key === "Escape" &&
+            lightbox.classList.contains("active")) {
+
+            closeLightbox();
+
         }
+
     });
-}
+
+});
